@@ -17,7 +17,7 @@ public class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
-    private final User testUser = new User("Test", "Test");
+    private final User testUser = new User("Test", "Test", "Test");
 
     @Test
     public void register() {

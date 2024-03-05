@@ -9,11 +9,20 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class User {
 
-    private final UUID uuid = UUID.randomUUID();
+    @NonNull
+    @Setter
+    private UUID uuid = UUID.randomUUID();
 
     private final String name;
 
     private final String email;
 
+    @NonNull
+    @EqualsAndHashCode.Exclude
+    @Setter
     private String password;
+
+    public static User empty() {
+        return new User("", "", "");
+    }
 }
