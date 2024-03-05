@@ -21,7 +21,7 @@ public class UserRepositoryTest {
 
     @Test
     public void register() {
-        Assertions.assertDoesNotThrow(() -> userRepository.register(testUser));
+        Assertions.assertDoesNotThrow(() -> userRepository.createUser(testUser));
 
         var userFromStorage = userRepository.getUserByUuid(testUser.getUuid()).orElseThrow();
 

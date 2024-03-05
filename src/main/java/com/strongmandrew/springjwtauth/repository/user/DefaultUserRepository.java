@@ -18,7 +18,7 @@ public class DefaultUserRepository implements UserRepository {
     private final JdbcClient jdbcClient;
 
     @Override
-    public boolean register(User user) {
+    public boolean createUser(User user) {
         return jdbcClient
                 .sql("INSERT INTO USERS VALUES(?, ?, ?, ?)")
                 .params(user.getUuid(), user.getName(), user.getEmail(), user.getPassword())

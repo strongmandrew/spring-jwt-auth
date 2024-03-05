@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface UserRepository extends RootRepository {
 
-    boolean register(User user);
+    boolean createUser(User user);
 
     Optional<User> getUserByUuid(UUID uuid);
 }
